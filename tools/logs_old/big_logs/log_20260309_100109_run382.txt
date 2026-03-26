@@ -1,0 +1,523 @@
+Run 382 Log
+Seed: None
+Fuel Brands:
+  Brand 1: price=33.88 THB/L, stations=[0,39,69,93,122,153]
+  Brand 10: price=41.93 THB/L, stations=[32,56,84,116,145,168]
+  Brand 11: price=19.05 THB/L, stations=[34,57,85,117,146]
+  Brand 12: price=40.56 THB/L, stations=[38,66,88,121,150]
+  Brand 2: price=37.84 THB/L, stations=[2,40,71,94,123,154]
+  Brand 3: price=22.34 THB/L, stations=[5,42,72,95,125,155]
+  Brand 4: price=34.46 THB/L, stations=[8,48,73,99,128,162]
+  Brand 5: price=40.10 THB/L, stations=[12,49,74,105,132,163]
+  Brand 6: price=33.59 THB/L, stations=[17,50,76,106,133,164]
+  Brand 7: price=39.41 THB/L, stations=[20,51,78,107,134,165]
+  Brand 8: price=23.31 THB/L, stations=[22,54,80,110,137,166]
+  Brand 9: price=18.59 THB/L, stations=[27,55,81,113,139,167]
+Points:
+  id=0, type=gas_station, brand=Brand 1, fuel_price=33.88, x=119.00, y=986.00
+  id=1, type=store, x=913.00, y=13.00
+  id=2, type=gas_station, brand=Brand 2, fuel_price=37.84, x=346.00, y=321.00
+  id=3, type=store, x=57.00, y=853.00
+  id=4, type=store, x=717.00, y=264.00
+  id=5, type=gas_station, brand=Brand 3, fuel_price=22.34, x=320.00, y=51.00
+  id=6, type=store, x=213.00, y=537.00
+  id=7, type=store, x=640.00, y=168.00
+  id=8, type=gas_station, brand=Brand 4, fuel_price=34.46, x=246.00, y=594.00
+  id=9, type=store, x=244.00, y=57.00
+  id=10, type=store, x=13.00, y=636.00
+  id=11, type=store, x=799.00, y=677.00
+  id=12, type=gas_station, brand=Brand 5, fuel_price=40.10, x=228.00, y=722.00
+  id=13, type=store, x=93.00, y=232.00
+  id=14, type=store, x=45.00, y=652.00
+  id=15, type=get_point, x=124.00, y=304.00
+  id=16, type=store, x=908.00, y=395.00
+  id=17, type=gas_station, brand=Brand 6, fuel_price=33.59, x=662.00, y=842.00
+  id=18, type=store, x=909.00, y=27.00
+  id=19, type=store, x=706.00, y=301.00
+  id=20, type=gas_station, brand=Brand 7, fuel_price=39.41, x=382.00, y=900.00
+  id=21, type=store, x=496.00, y=129.00
+  id=22, type=gas_station, brand=Brand 8, fuel_price=23.31, x=106.00, y=967.00
+  id=23, type=store, x=835.00, y=522.00
+  id=24, type=store, x=878.00, y=650.00
+  id=25, type=store, x=388.00, y=928.00
+  id=26, type=store, x=484.00, y=314.00
+  id=27, type=gas_station, brand=Brand 9, fuel_price=18.59, x=739.00, y=54.00
+  id=28, type=get_point, x=573.00, y=777.00
+  id=29, type=launch_point, x=101.00, y=20.00
+  id=30, type=store, x=389.00, y=135.00
+  id=31, type=store, x=689.00, y=82.00
+  id=32, type=gas_station, brand=Brand 10, fuel_price=41.93, x=278.00, y=413.00
+  id=33, type=store, x=827.00, y=694.00
+  id=34, type=gas_station, brand=Brand 11, fuel_price=19.05, x=179.00, y=453.00
+  id=35, type=store, x=780.00, y=173.00
+  id=36, type=store, x=45.00, y=745.00
+  id=37, type=store, x=956.00, y=331.00
+  id=38, type=gas_station, brand=Brand 12, fuel_price=40.56, x=198.00, y=127.00
+  id=39, type=gas_station, brand=Brand 1, fuel_price=33.88, x=99.00, y=65.00
+  id=40, type=gas_station, brand=Brand 2, fuel_price=37.84, x=940.00, y=824.00
+  id=41, type=store, x=869.00, y=331.00
+  id=42, type=gas_station, brand=Brand 3, fuel_price=22.34, x=599.00, y=906.00
+  id=43, type=store, x=67.00, y=998.00
+  id=44, type=store, x=940.00, y=427.00
+  id=45, type=store, x=362.00, y=688.00
+  id=46, type=store, x=33.00, y=568.00
+  id=47, type=store, x=325.00, y=98.00
+  id=48, type=gas_station, brand=Brand 4, fuel_price=34.46, x=559.00, y=553.00
+  id=49, type=gas_station, brand=Brand 5, fuel_price=40.10, x=272.00, y=133.00
+  id=50, type=gas_station, brand=Brand 6, fuel_price=33.59, x=853.00, y=845.00
+  id=51, type=gas_station, brand=Brand 7, fuel_price=39.41, x=992.00, y=576.00
+  id=52, type=launch_point, x=833.00, y=466.00
+  id=53, type=store, x=696.00, y=142.00
+  id=54, type=gas_station, brand=Brand 8, fuel_price=23.31, x=608.00, y=806.00
+  id=55, type=gas_station, brand=Brand 9, fuel_price=18.59, x=32.00, y=466.00
+  id=56, type=gas_station, brand=Brand 10, fuel_price=41.93, x=285.00, y=128.00
+  id=57, type=gas_station, brand=Brand 11, fuel_price=19.05, x=896.00, y=121.00
+  id=58, type=store, x=738.00, y=405.00
+  id=59, type=store, x=952.00, y=795.00
+  id=60, type=store, x=797.00, y=494.00
+  id=61, type=get_point, x=268.00, y=761.00
+  id=62, type=store, x=431.00, y=470.00
+  id=63, type=launch_point, x=843.00, y=793.00
+  id=64, type=store, x=773.00, y=387.00
+  id=65, type=store, x=242.00, y=603.00
+  id=66, type=gas_station, brand=Brand 12, fuel_price=40.56, x=411.00, y=100.00
+  id=67, type=store, x=321.00, y=652.00
+  id=68, type=store, x=81.00, y=65.00
+  id=69, type=gas_station, brand=Brand 1, fuel_price=33.88, x=824.00, y=475.00
+  id=70, type=store, x=348.00, y=84.00
+  id=71, type=gas_station, brand=Brand 2, fuel_price=37.84, x=206.00, y=40.00
+  id=72, type=gas_station, brand=Brand 3, fuel_price=22.34, x=791.00, y=726.00
+  id=73, type=gas_station, brand=Brand 4, fuel_price=34.46, x=705.00, y=939.00
+  id=74, type=gas_station, brand=Brand 5, fuel_price=40.10, x=981.00, y=556.00
+  id=75, type=store, x=723.00, y=179.00
+  id=76, type=gas_station, brand=Brand 6, fuel_price=33.59, x=570.00, y=395.00
+  id=77, type=store, x=106.00, y=702.00
+  id=78, type=gas_station, brand=Brand 7, fuel_price=39.41, x=859.00, y=786.00
+  id=79, type=store, x=975.00, y=751.00
+  id=80, type=gas_station, brand=Brand 8, fuel_price=23.31, x=46.00, y=419.00
+  id=81, type=gas_station, brand=Brand 9, fuel_price=18.59, x=214.00, y=65.00
+  id=82, type=store, x=735.00, y=927.00
+  id=83, type=get_point, x=215.00, y=177.00
+  id=84, type=gas_station, brand=Brand 10, fuel_price=41.93, x=674.00, y=62.00
+  id=85, type=gas_station, brand=Brand 11, fuel_price=19.05, x=254.00, y=871.00
+  id=86, type=store, x=192.00, y=381.00
+  id=87, type=launch_point, x=300.00, y=865.00
+  id=88, type=gas_station, brand=Brand 12, fuel_price=40.56, x=571.00, y=376.00
+  id=89, type=store, x=140.00, y=908.00
+  id=90, type=store, x=42.00, y=558.00
+  id=91, type=store, x=81.00, y=846.00
+  id=92, type=store, x=526.00, y=769.00
+  id=93, type=gas_station, brand=Brand 1, fuel_price=33.88, x=655.00, y=889.00
+  id=94, type=gas_station, brand=Brand 2, fuel_price=37.84, x=181.00, y=343.00
+  id=95, type=gas_station, brand=Brand 3, fuel_price=22.34, x=152.00, y=808.00
+  id=96, type=store, x=181.00, y=953.00
+  id=97, type=store, x=843.00, y=120.00
+  id=98, type=store, x=942.00, y=1000.00
+  id=99, type=gas_station, brand=Brand 4, fuel_price=34.46, x=55.00, y=317.00
+  id=100, type=store, x=158.00, y=738.00
+  id=101, type=store, x=174.00, y=778.00
+  id=102, type=store, x=458.00, y=520.00
+  id=103, type=launch_point, x=583.00, y=993.00
+  id=104, type=store, x=465.00, y=826.00
+  id=105, type=gas_station, brand=Brand 5, fuel_price=40.10, x=292.00, y=877.00
+  id=106, type=gas_station, brand=Brand 6, fuel_price=33.59, x=7.00, y=616.00
+  id=107, type=gas_station, brand=Brand 7, fuel_price=39.41, x=644.00, y=536.00
+  id=108, type=store, x=76.00, y=721.00
+  id=109, type=get_point, x=992.00, y=402.00
+  id=110, type=gas_station, brand=Brand 8, fuel_price=23.31, x=989.00, y=87.00
+  id=111, type=store, x=446.00, y=322.00
+  id=112, type=launch_point, x=488.00, y=935.00
+  id=113, type=gas_station, brand=Brand 9, fuel_price=18.59, x=244.00, y=773.00
+  id=114, type=store, x=850.00, y=783.00
+  id=115, type=launch_point, x=471.00, y=269.00
+  id=116, type=gas_station, brand=Brand 10, fuel_price=41.93, x=307.00, y=606.00
+  id=117, type=gas_station, brand=Brand 11, fuel_price=19.05, x=692.00, y=197.00
+  id=118, type=get_point, x=289.00, y=666.00
+  id=119, type=store, x=530.00, y=500.00
+  id=120, type=get_point, x=230.00, y=776.00
+  id=121, type=gas_station, brand=Brand 12, fuel_price=40.56, x=240.00, y=49.00
+  id=122, type=gas_station, brand=Brand 1, fuel_price=33.88, x=144.00, y=501.00
+  id=123, type=gas_station, brand=Brand 2, fuel_price=37.84, x=954.00, y=953.00
+  id=124, type=store, x=785.00, y=951.00
+  id=125, type=gas_station, brand=Brand 3, fuel_price=22.34, x=376.00, y=956.00
+  id=126, type=store, x=201.00, y=364.00
+  id=127, type=store, x=914.00, y=932.00
+  id=128, type=gas_station, brand=Brand 4, fuel_price=34.46, x=549.00, y=407.00
+  id=129, type=store, x=844.00, y=427.00
+  id=130, type=store, x=553.00, y=760.00
+  id=131, type=store, x=340.00, y=169.00
+  id=132, type=gas_station, brand=Brand 5, fuel_price=40.10, x=338.00, y=597.00
+  id=133, type=gas_station, brand=Brand 6, fuel_price=33.59, x=924.00, y=871.00
+  id=134, type=gas_station, brand=Brand 7, fuel_price=39.41, x=533.00, y=730.00
+  id=135, type=store, x=364.00, y=327.00
+  id=136, type=launch_point, x=521.00, y=66.00
+  id=137, type=gas_station, brand=Brand 8, fuel_price=23.31, x=806.00, y=889.00
+  id=138, type=store, x=536.00, y=825.00
+  id=139, type=gas_station, brand=Brand 9, fuel_price=18.59, x=671.00, y=778.00
+  id=140, type=store, x=774.00, y=911.00
+  id=141, type=store, x=588.00, y=418.00
+  id=142, type=store, x=362.00, y=551.00
+  id=143, type=store, x=3.00, y=605.00
+  id=144, type=store, x=993.00, y=31.00
+  id=145, type=gas_station, brand=Brand 10, fuel_price=41.93, x=398.00, y=127.00
+  id=146, type=gas_station, brand=Brand 11, fuel_price=19.05, x=102.00, y=651.00
+  id=147, type=store, x=788.00, y=464.00
+  id=148, type=store, x=389.00, y=544.00
+  id=149, type=get_point, x=576.00, y=4.00
+  id=150, type=gas_station, brand=Brand 12, fuel_price=40.56, x=785.00, y=577.00
+  id=151, type=store, x=702.00, y=867.00
+  id=152, type=store, x=164.00, y=651.00
+  id=153, type=gas_station, brand=Brand 1, fuel_price=33.88, x=863.00, y=706.00
+  id=154, type=gas_station, brand=Brand 2, fuel_price=37.84, x=932.00, y=12.00
+  id=155, type=gas_station, brand=Brand 3, fuel_price=22.34, x=419.00, y=295.00
+  id=156, type=get_point, x=39.00, y=156.00
+  id=157, type=launch_point, x=215.00, y=14.00
+  id=158, type=store, x=627.00, y=874.00
+  id=159, type=launch_point, x=353.00, y=155.00
+  id=160, type=store, x=515.00, y=357.00
+  id=161, type=get_point, x=987.00, y=760.00
+  id=162, type=gas_station, brand=Brand 4, fuel_price=34.46, x=912.00, y=777.00
+  id=163, type=gas_station, brand=Brand 5, fuel_price=40.10, x=772.00, y=46.00
+  id=164, type=gas_station, brand=Brand 6, fuel_price=33.59, x=493.00, y=898.00
+  id=165, type=gas_station, brand=Brand 7, fuel_price=39.41, x=421.00, y=276.00
+  id=166, type=gas_station, brand=Brand 8, fuel_price=23.31, x=946.00, y=568.00
+  id=167, type=gas_station, brand=Brand 9, fuel_price=18.59, x=569.00, y=835.00
+  id=168, type=gas_station, brand=Brand 10, fuel_price=41.93, x=750.00, y=104.00
+  id=169, type=store, x=44.00, y=763.00
+Overall Cause: Completed all cars
+Total distance (all cars): 16111.09 m
+Total budget (all cars): 14432.05 THB
+--- Per-Car Results ---
+Car from Launch 29
+  Shopping list (name:qty): Beef:1, Tomato:3, Rice:4, Kale:7
+  Original stores: 68 -> 70
+  Optimized quest: 29 -> 70 -> 68 -> 156
+  Get point: 156
+  Cause: Completed quest
+  Distance: 840.43 m
+  Budget: 929.48 THB [C1=100.00, C2_fuel=1.92, C2_extra=0.00, C3_entrance=282.21, C3_items=545.34]
+  Car Log:
+    From 29 to 39: 45.04m, speed=25.00m/s, fuel_used=0.007L, fuel_left=79.99L [TRAFFIC JAM x2]
+    Refuel at 39 (Brand 1), price=33.88 THB/L
+    From 39 to 68: 18.00m, speed=25.00m/s, fuel_used=0.001L, fuel_left=80.00L
+    From 68 to 39: 18.00m, speed=25.00m/s, fuel_used=0.001L, fuel_left=80.00L
+    Refuel at 39 (Brand 1), price=33.88 THB/L
+    From 39 to 29: 45.04m, speed=25.00m/s, fuel_used=0.004L, fuel_left=80.00L
+    From 29 to 121: 141.99m, speed=25.00m/s, fuel_used=0.011L, fuel_left=79.99L
+    Refuel at 121 (Brand 12), price=40.56 THB/L
+    From 121 to 9: 8.94m, speed=25.00m/s, fuel_used=0.001L, fuel_left=80.00L
+    From 9 to 5: 76.24m, speed=25.00m/s, fuel_used=0.006L, fuel_left=79.99L
+    Refuel at 5 (Brand 3), price=22.34 THB/L
+    From 5 to 70: 43.28m, speed=25.00m/s, fuel_used=0.003L, fuel_left=80.00L
+    Buy at store 70: Beefx1 (cost 236.34 THB), Tomatox3 (cost 62.68 THB), Ricex4 (cost 113.27 THB), Kalex7 (cost 133.06 THB)
+    From 70 to 5: 43.28m, speed=25.00m/s, fuel_used=0.003L, fuel_left=79.99L
+    Refuel at 5 (Brand 3), price=22.34 THB/L
+    From 5 to 9: 76.24m, speed=25.00m/s, fuel_used=0.006L, fuel_left=79.99L
+    From 9 to 13: 231.14m, speed=25.00m/s, fuel_used=0.018L, fuel_left=79.98L
+    From 13 to 156: 93.23m, speed=25.00m/s, fuel_used=0.007L, fuel_left=79.97L
+
+Car from Launch 52
+  Shopping list (name:qty): Cabbage:2, Pork:3, Beef:1
+  Original stores: 129 -> 147
+  Optimized quest: 52 -> 147 -> 129 -> 109
+  Get point: 109
+  Cause: Completed quest
+  Distance: 1162.95 m
+  Budget: 1242.87 THB [C1=100.00, C2_fuel=3.12, C2_extra=0.00, C3_entrance=568.53, C3_items=571.23]
+  Car Log:
+    From 52 to 129: 40.52m, speed=25.00m/s, fuel_used=0.003L, fuel_left=80.00L
+    Buy at store 129: Porkx3 (cost 295.14 THB), Beefx1 (cost 250.16 THB)
+    From 129 to 147: 67.12m, speed=25.00m/s, fuel_used=0.010L, fuel_left=79.99L [TRAFFIC JAM x2]
+    Buy at store 147: Cabbagex2 (cost 25.93 THB)
+    From 147 to 60: 31.32m, speed=25.00m/s, fuel_used=0.002L, fuel_left=79.98L
+    From 60 to 23: 47.20m, speed=25.00m/s, fuel_used=0.004L, fuel_left=79.98L
+    From 23 to 24: 135.03m, speed=25.00m/s, fuel_used=0.011L, fuel_left=79.97L
+    From 24 to 153: 57.97m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.97L
+    Refuel at 153 (Brand 1), price=33.88 THB/L
+    From 153 to 33: 37.95m, speed=25.00m/s, fuel_used=0.003L, fuel_left=80.00L
+    From 33 to 11: 32.76m, speed=25.00m/s, fuel_used=0.003L, fuel_left=79.99L
+    From 11 to 19: 387.33m, speed=25.00m/s, fuel_used=0.030L, fuel_left=79.96L
+    From 19 to 16: 222.80m, speed=25.00m/s, fuel_used=0.017L, fuel_left=79.95L
+    From 16 to 44: 45.25m, speed=25.00m/s, fuel_used=0.004L, fuel_left=79.94L
+    From 44 to 109: 57.70m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.94L
+
+Car from Launch 63
+  Shopping list (name:qty): Cockle:2, Garlicpowder:2, Egg:2
+  Original stores: 114 -> 33 -> 24
+  Optimized quest: 63 -> 114 -> 33 -> 24 -> 161
+  Get point: 161
+  Cause: Completed quest
+  Distance: 776.60 m
+  Budget: 745.41 THB [C1=100.00, C2_fuel=1.85, C2_extra=0.00, C3_entrance=170.90, C3_items=472.66]
+  Car Log:
+    From 63 to 114: 12.21m, speed=25.00m/s, fuel_used=0.001L, fuel_left=80.00L
+    Buy at store 114: Cocklex2 (cost 265.08 THB), Garlicpowderx2 (cost 200.01 THB), Eggx2 (cost 7.57 THB)
+    From 114 to 63: 12.21m, speed=25.00m/s, fuel_used=0.001L, fuel_left=80.00L
+    From 63 to 50: 52.95m, speed=25.00m/s, fuel_used=0.004L, fuel_left=79.99L
+    Refuel at 50 (Brand 6), price=33.59 THB/L
+    From 50 to 137: 64.38m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.99L
+    Refuel at 137 (Brand 8), price=23.31 THB/L
+    From 137 to 151: 106.30m, speed=25.00m/s, fuel_used=0.008L, fuel_left=79.99L
+    From 151 to 17: 47.17m, speed=25.00m/s, fuel_used=0.004L, fuel_left=79.99L
+    Refuel at 17 (Brand 6), price=33.59 THB/L
+    From 17 to 72: 173.48m, speed=25.00m/s, fuel_used=0.014L, fuel_left=79.99L
+    Refuel at 72 (Brand 3), price=22.34 THB/L
+    From 72 to 33: 48.17m, speed=25.00m/s, fuel_used=0.004L, fuel_left=80.00L
+    From 33 to 153: 37.95m, speed=25.00m/s, fuel_used=0.003L, fuel_left=79.99L
+    Refuel at 153 (Brand 1), price=33.88 THB/L
+    From 153 to 40: 140.90m, speed=25.00m/s, fuel_used=0.011L, fuel_left=79.99L
+    Refuel at 40 (Brand 2), price=37.84 THB/L
+    From 40 to 59: 31.38m, speed=25.00m/s, fuel_used=0.002L, fuel_left=80.00L
+    From 59 to 161: 49.50m, speed=25.00m/s, fuel_used=0.004L, fuel_left=79.99L
+
+Car from Launch 87
+  Shopping list (name:qty): Carrot:2, Tomato:1, Pepper:2, Pork:2, Potato:2
+  Original stores: 25 -> 104
+  Optimized quest: 87 -> 25 -> 104 -> 61
+  Get point: 61
+  Cause: Completed quest
+  Distance: 5334.78 m
+  Budget: 850.80 THB [C1=100.00, C2_fuel=13.03, C2_extra=0.00, C3_entrance=333.21, C3_items=404.56]
+  Car Log:
+    From 87 to 105: 14.42m, speed=25.00m/s, fuel_used=0.001L, fuel_left=80.00L
+    Refuel at 105 (Brand 5), price=40.10 THB/L
+    From 105 to 20: 92.89m, speed=25.00m/s, fuel_used=0.007L, fuel_left=79.99L
+    Refuel at 20 (Brand 7), price=39.41 THB/L
+    From 20 to 25: 28.64m, speed=25.00m/s, fuel_used=0.002L, fuel_left=80.00L
+    Buy at store 25: Tomatox1 (cost 22.62 THB), Porkx2 (cost 187.25 THB), Potatox2 (cost 54.83 THB)
+    From 25 to 20: 28.64m, speed=25.00m/s, fuel_used=0.002L, fuel_left=80.00L
+    Refuel at 20 (Brand 7), price=39.41 THB/L
+    From 20 to 61: 179.77m, speed=25.00m/s, fuel_used=0.014L, fuel_left=79.99L
+    From 61 to 113: 26.83m, speed=25.00m/s, fuel_used=0.002L, fuel_left=79.98L
+    Refuel at 113 (Brand 9), price=18.59 THB/L
+    From 113 to 12: 53.45m, speed=25.00m/s, fuel_used=0.004L, fuel_left=80.00L
+    Refuel at 12 (Brand 5), price=40.10 THB/L
+    From 12 to 65: 119.82m, speed=25.00m/s, fuel_used=0.009L, fuel_left=79.99L
+    From 65 to 8: 9.85m, speed=25.00m/s, fuel_used=0.001L, fuel_left=79.99L
+    Refuel at 8 (Brand 4), price=34.46 THB/L
+    From 8 to 6: 65.86m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.99L
+    From 6 to 2: 253.66m, speed=25.00m/s, fuel_used=0.020L, fuel_left=79.98L
+    Refuel at 2 (Brand 2), price=37.84 THB/L
+    From 2 to 18: 635.14m, speed=25.00m/s, fuel_used=0.050L, fuel_left=79.95L
+    From 18 to 4: 305.01m, speed=25.00m/s, fuel_used=0.024L, fuel_left=79.93L
+    From 4 to 19: 38.60m, speed=25.00m/s, fuel_used=0.003L, fuel_left=79.92L
+    From 19 to 11: 387.33m, speed=25.00m/s, fuel_used=0.030L, fuel_left=79.89L
+    From 11 to 33: 32.76m, speed=25.00m/s, fuel_used=0.003L, fuel_left=79.89L
+    From 33 to 72: 48.17m, speed=25.00m/s, fuel_used=0.004L, fuel_left=79.89L
+    Refuel at 72 (Brand 3), price=22.34 THB/L
+    From 72 to 17: 173.48m, speed=25.00m/s, fuel_used=0.027L, fuel_left=79.97L [TRAFFIC JAM x2]
+    Refuel at 17 (Brand 6), price=33.59 THB/L
+    From 17 to 139: 64.63m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.99L
+    Refuel at 139 (Brand 9), price=18.59 THB/L
+    From 139 to 28: 98.01m, speed=25.00m/s, fuel_used=0.008L, fuel_left=79.99L
+    From 28 to 130: 26.25m, speed=25.00m/s, fuel_used=0.002L, fuel_left=79.99L
+    From 130 to 92: 28.46m, speed=25.00m/s, fuel_used=0.002L, fuel_left=79.99L
+    From 92 to 138: 56.89m, speed=25.00m/s, fuel_used=0.004L, fuel_left=79.98L
+    From 138 to 104: 71.01m, speed=25.00m/s, fuel_used=0.011L, fuel_left=79.97L [TRAFFIC JAM x2]
+    Buy at store 104: Carrotx2 (cost 55.59 THB), Pepperx2 (cost 84.27 THB)
+    From 104 to 138: 71.01m, speed=25.00m/s, fuel_used=0.006L, fuel_left=79.97L
+    From 138 to 92: 56.89m, speed=25.00m/s, fuel_used=0.004L, fuel_left=79.96L
+    From 92 to 130: 28.46m, speed=25.00m/s, fuel_used=0.002L, fuel_left=79.96L
+    From 130 to 28: 26.25m, speed=25.00m/s, fuel_used=0.002L, fuel_left=79.96L
+    From 28 to 139: 98.01m, speed=25.00m/s, fuel_used=0.008L, fuel_left=79.95L
+    Refuel at 139 (Brand 9), price=18.59 THB/L
+    From 139 to 17: 64.63m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.99L
+    Refuel at 17 (Brand 6), price=33.59 THB/L
+    From 17 to 72: 173.48m, speed=25.00m/s, fuel_used=0.014L, fuel_left=79.99L
+    Refuel at 72 (Brand 3), price=22.34 THB/L
+    From 72 to 33: 48.17m, speed=25.00m/s, fuel_used=0.004L, fuel_left=80.00L
+    From 33 to 11: 32.76m, speed=25.00m/s, fuel_used=0.003L, fuel_left=79.99L
+    From 11 to 19: 387.33m, speed=25.00m/s, fuel_used=0.030L, fuel_left=79.96L
+    From 19 to 4: 38.60m, speed=25.00m/s, fuel_used=0.003L, fuel_left=79.96L
+    From 4 to 18: 305.01m, speed=25.00m/s, fuel_used=0.024L, fuel_left=79.94L
+    From 18 to 2: 635.14m, speed=25.00m/s, fuel_used=0.050L, fuel_left=79.89L
+    Refuel at 2 (Brand 2), price=37.84 THB/L
+    From 2 to 6: 253.66m, speed=25.00m/s, fuel_used=0.020L, fuel_left=79.98L
+    From 6 to 8: 65.86m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.98L
+    Refuel at 8 (Brand 4), price=34.46 THB/L
+    From 8 to 65: 9.85m, speed=25.00m/s, fuel_used=0.001L, fuel_left=80.00L
+    From 65 to 12: 119.82m, speed=25.00m/s, fuel_used=0.009L, fuel_left=79.99L
+    Refuel at 12 (Brand 5), price=40.10 THB/L
+    From 12 to 113: 53.45m, speed=25.00m/s, fuel_used=0.004L, fuel_left=80.00L
+    Refuel at 113 (Brand 9), price=18.59 THB/L
+    From 113 to 61: 26.83m, speed=25.00m/s, fuel_used=0.002L, fuel_left=80.00L
+
+Car from Launch 103
+  Shopping list (name:qty): Garlicpowder:3, Cumin:2, Chicken:1, Salt:2, Lamb:3
+  Original stores: 158 -> 151
+  Optimized quest: 103 -> 158 -> 151 -> 28
+  Get point: 28
+  Cause: Completed quest
+  Distance: 341.04 m
+  Budget: 2232.42 THB [C1=100.00, C2_fuel=0.68, C2_extra=0.00, C3_entrance=345.72, C3_items=1786.02]
+  Car Log:
+    From 103 to 42: 88.46m, speed=25.00m/s, fuel_used=0.007L, fuel_left=79.99L
+    Refuel at 42 (Brand 3), price=22.34 THB/L
+    From 42 to 158: 42.52m, speed=25.00m/s, fuel_used=0.003L, fuel_left=80.00L
+    Buy at store 158: Garlicpowderx3 (cost 294.27 THB), Cuminx2 (cost 175.38 THB), Chickenx1 (cost 74.93 THB), Saltx2 (cost 7.31 THB), Lambx3 (cost 1234.13 THB)
+    From 158 to 17: 47.42m, speed=25.00m/s, fuel_used=0.004L, fuel_left=79.99L
+    Refuel at 17 (Brand 6), price=33.59 THB/L
+    From 17 to 139: 64.63m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.99L
+    Refuel at 139 (Brand 9), price=18.59 THB/L
+    From 139 to 28: 98.01m, speed=25.00m/s, fuel_used=0.008L, fuel_left=79.99L
+
+Car from Launch 112
+  Shopping list (name:qty): Chicken:1, Turkey:1, Cucuber:3
+  Original stores: 25 -> 138
+  Optimized quest: 112 -> 25 -> 138 -> 28
+  Get point: 28
+  Cause: Completed quest
+  Distance: 5562.41 m
+  Budget: 1169.98 THB [C1=100.00, C2_fuel=15.71, C2_extra=0.00, C3_entrance=478.08, C3_items=576.19]
+  Car Log:
+    From 112 to 164: 37.34m, speed=25.00m/s, fuel_used=0.003L, fuel_left=80.00L
+    Refuel at 164 (Brand 6), price=33.59 THB/L
+    From 164 to 104: 77.25m, speed=25.00m/s, fuel_used=0.006L, fuel_left=79.99L
+    From 104 to 138: 71.01m, speed=25.00m/s, fuel_used=0.006L, fuel_left=79.99L
+    From 138 to 92: 56.89m, speed=25.00m/s, fuel_used=0.004L, fuel_left=79.98L
+    From 92 to 130: 28.46m, speed=25.00m/s, fuel_used=0.002L, fuel_left=79.98L
+    From 130 to 28: 26.25m, speed=25.00m/s, fuel_used=0.002L, fuel_left=79.98L
+    From 28 to 139: 98.01m, speed=25.00m/s, fuel_used=0.008L, fuel_left=79.97L
+    Refuel at 139 (Brand 9), price=18.59 THB/L
+    From 139 to 17: 64.63m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.99L
+    Refuel at 17 (Brand 6), price=33.59 THB/L
+    From 17 to 72: 173.48m, speed=25.00m/s, fuel_used=0.014L, fuel_left=79.99L
+    Refuel at 72 (Brand 3), price=22.34 THB/L
+    From 72 to 33: 48.17m, speed=25.00m/s, fuel_used=0.004L, fuel_left=80.00L
+    From 33 to 11: 32.76m, speed=25.00m/s, fuel_used=0.003L, fuel_left=79.99L
+    From 11 to 19: 387.33m, speed=25.00m/s, fuel_used=0.030L, fuel_left=79.96L
+    From 19 to 4: 38.60m, speed=25.00m/s, fuel_used=0.003L, fuel_left=79.96L
+    From 4 to 18: 305.01m, speed=25.00m/s, fuel_used=0.024L, fuel_left=79.94L
+    From 18 to 2: 635.14m, speed=25.00m/s, fuel_used=0.050L, fuel_left=79.89L
+    Refuel at 2 (Brand 2), price=37.84 THB/L
+    From 2 to 6: 253.66m, speed=25.00m/s, fuel_used=0.020L, fuel_left=79.98L
+    From 6 to 8: 65.86m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.98L
+    Refuel at 8 (Brand 4), price=34.46 THB/L
+    From 8 to 65: 9.85m, speed=25.00m/s, fuel_used=0.001L, fuel_left=80.00L
+    From 65 to 12: 119.82m, speed=25.00m/s, fuel_used=0.009L, fuel_left=79.99L
+    Refuel at 12 (Brand 5), price=40.10 THB/L
+    From 12 to 113: 53.45m, speed=25.00m/s, fuel_used=0.004L, fuel_left=80.00L
+    Refuel at 113 (Brand 9), price=18.59 THB/L
+    From 113 to 61: 26.83m, speed=25.00m/s, fuel_used=0.002L, fuel_left=80.00L
+    From 61 to 20: 179.77m, speed=25.00m/s, fuel_used=0.014L, fuel_left=79.98L
+    Refuel at 20 (Brand 7), price=39.41 THB/L
+    From 20 to 25: 28.64m, speed=25.00m/s, fuel_used=0.002L, fuel_left=80.00L
+    From 25 to 20: 28.64m, speed=25.00m/s, fuel_used=0.002L, fuel_left=80.00L
+    Refuel at 20 (Brand 7), price=39.41 THB/L
+    From 20 to 61: 179.77m, speed=25.00m/s, fuel_used=0.028L, fuel_left=79.97L [TRAFFIC JAM x2]
+    From 61 to 113: 26.83m, speed=25.00m/s, fuel_used=0.002L, fuel_left=79.97L
+    Refuel at 113 (Brand 9), price=18.59 THB/L
+    From 113 to 12: 53.45m, speed=25.00m/s, fuel_used=0.004L, fuel_left=80.00L
+    Refuel at 12 (Brand 5), price=40.10 THB/L
+    From 12 to 65: 119.82m, speed=25.00m/s, fuel_used=0.009L, fuel_left=79.99L
+    From 65 to 8: 9.85m, speed=25.00m/s, fuel_used=0.001L, fuel_left=79.99L
+    Refuel at 8 (Brand 4), price=34.46 THB/L
+    From 8 to 6: 65.86m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.99L
+    From 6 to 2: 253.66m, speed=25.00m/s, fuel_used=0.020L, fuel_left=79.98L
+    Refuel at 2 (Brand 2), price=37.84 THB/L
+    From 2 to 18: 635.14m, speed=25.00m/s, fuel_used=0.099L, fuel_left=79.90L [TRAFFIC JAM x2]
+    From 18 to 4: 305.01m, speed=25.00m/s, fuel_used=0.024L, fuel_left=79.88L
+    From 4 to 19: 38.60m, speed=25.00m/s, fuel_used=0.003L, fuel_left=79.87L
+    From 19 to 11: 387.33m, speed=25.00m/s, fuel_used=0.030L, fuel_left=79.84L
+    From 11 to 33: 32.76m, speed=25.00m/s, fuel_used=0.003L, fuel_left=79.84L
+    From 33 to 72: 48.17m, speed=25.00m/s, fuel_used=0.004L, fuel_left=79.84L
+    Refuel at 72 (Brand 3), price=22.34 THB/L
+    From 72 to 17: 173.48m, speed=25.00m/s, fuel_used=0.014L, fuel_left=79.99L
+    Refuel at 17 (Brand 6), price=33.59 THB/L
+    From 17 to 139: 64.63m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.99L
+    Refuel at 139 (Brand 9), price=18.59 THB/L
+    From 139 to 28: 98.01m, speed=25.00m/s, fuel_used=0.008L, fuel_left=79.99L
+    From 28 to 130: 26.25m, speed=25.00m/s, fuel_used=0.004L, fuel_left=79.99L [TRAFFIC JAM x2]
+    From 130 to 92: 28.46m, speed=25.00m/s, fuel_used=0.002L, fuel_left=79.99L
+    From 92 to 138: 56.89m, speed=25.00m/s, fuel_used=0.004L, fuel_left=79.98L
+    Buy at store 138: Chickenx1 (cost 66.59 THB), Turkeyx1 (cost 460.12 THB), Cucuberx3 (cost 49.48 THB)
+    From 138 to 92: 56.89m, speed=25.00m/s, fuel_used=0.004L, fuel_left=79.98L
+    From 92 to 130: 28.46m, speed=25.00m/s, fuel_used=0.002L, fuel_left=79.97L
+    From 130 to 28: 26.25m, speed=25.00m/s, fuel_used=0.002L, fuel_left=79.97L
+
+Car from Launch 115
+  Shopping list (name:qty): Potato:1, Pepper:3, Turkey:1, Shrimp:4, Paprica:3, Cabbage:2
+  Original stores: 26 -> 111 -> 160
+  Optimized quest: 115 -> 26 -> 160 -> 111 -> 83
+  Get point: 83
+  Cause: Completed quest
+  Distance: 748.24 m
+  Budget: 3680.39 THB [C1=100.00, C2_fuel=1.87, C2_extra=0.00, C3_entrance=477.08, C3_items=3101.44]
+  Car Log:
+    From 115 to 26: 46.84m, speed=25.00m/s, fuel_used=0.004L, fuel_left=80.00L
+    Buy at store 26: Potatox1 (cost 22.57 THB), Pepperx3 (cost 144.00 THB), Papricax3 (cost 1238.80 THB), Cabbagex2 (cost 30.58 THB)
+    From 26 to 111: 38.83m, speed=25.00m/s, fuel_used=0.003L, fuel_left=79.99L
+    Buy at store 111: Turkeyx1 (cost 384.16 THB), Shrimpx4 (cost 1281.33 THB)
+    From 111 to 26: 38.83m, speed=25.00m/s, fuel_used=0.003L, fuel_left=79.99L
+    From 26 to 135: 120.70m, speed=25.00m/s, fuel_used=0.009L, fuel_left=79.98L
+    From 135 to 2: 18.97m, speed=25.00m/s, fuel_used=0.001L, fuel_left=79.98L
+    Refuel at 2 (Brand 2), price=37.84 THB/L
+    From 2 to 5: 271.25m, speed=25.00m/s, fuel_used=0.021L, fuel_left=79.98L
+    Refuel at 5 (Brand 3), price=22.34 THB/L
+    From 5 to 9: 76.24m, speed=25.00m/s, fuel_used=0.006L, fuel_left=79.99L
+    From 9 to 38: 83.76m, speed=25.00m/s, fuel_used=0.007L, fuel_left=79.99L
+    Refuel at 38 (Brand 12), price=40.56 THB/L
+    From 38 to 83: 52.81m, speed=25.00m/s, fuel_used=0.004L, fuel_left=80.00L
+
+Car from Launch 136
+  Shopping list (name:qty): Cockle:3, Spinach:3, Paprica:1, Cabbage:3, Pepper:4
+  Original stores: 21 -> 7
+  Optimized quest: 136 -> 21 -> 7 -> 149
+  Get point: 149
+  Cause: Completed quest
+  Distance: 516.81 m
+  Budget: 1759.08 THB [C1=100.00, C2_fuel=1.21, C2_extra=0.00, C3_entrance=529.41, C3_items=1128.46]
+  Car Log:
+    From 136 to 21: 67.78m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.99L
+    Buy at store 21: Spinachx3 (cost 88.72 THB), Cabbagex3 (cost 40.88 THB)
+    From 21 to 7: 149.19m, speed=25.00m/s, fuel_used=0.012L, fuel_left=79.98L
+    Buy at store 7: Cocklex3 (cost 429.62 THB), Papricax1 (cost 383.12 THB), Pepperx4 (cost 186.11 THB)
+    From 7 to 21: 149.19m, speed=25.00m/s, fuel_used=0.012L, fuel_left=79.97L
+    From 21 to 136: 67.78m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.97L
+    From 136 to 149: 82.88m, speed=25.00m/s, fuel_used=0.006L, fuel_left=79.96L
+
+Car from Launch 157
+  Shopping list (name:qty): Rice:3, Kale:3, Nigga fish:1
+  Original stores: 9 -> 70
+  Optimized quest: 157 -> 9 -> 70 -> 83
+  Get point: 83
+  Cause: Completed quest
+  Distance: 427.56 m
+  Budget: 557.17 THB [C1=100.00, C2_fuel=0.97, C2_extra=0.00, C3_entrance=373.11, C3_items=83.09]
+  Car Log:
+    From 157 to 121: 43.01m, speed=25.00m/s, fuel_used=0.003L, fuel_left=80.00L
+    Refuel at 121 (Brand 12), price=40.56 THB/L
+    From 121 to 9: 8.94m, speed=25.00m/s, fuel_used=0.001L, fuel_left=80.00L
+    Buy at store 9: Kalex3 (cost 54.83 THB), Nigga fishx1 (cost 45.31 THB)
+    From 9 to 5: 76.24m, speed=25.00m/s, fuel_used=0.006L, fuel_left=79.99L
+    Refuel at 5 (Brand 3), price=22.34 THB/L
+    From 5 to 70: 43.28m, speed=25.00m/s, fuel_used=0.003L, fuel_left=80.00L
+    Buy at store 70: Ricex3 (cost 84.95 THB, revenue 102.00 THB)
+    From 70 to 5: 43.28m, speed=25.00m/s, fuel_used=0.003L, fuel_left=79.99L
+    Refuel at 5 (Brand 3), price=22.34 THB/L
+    From 5 to 9: 76.24m, speed=25.00m/s, fuel_used=0.006L, fuel_left=79.99L
+    From 9 to 38: 83.76m, speed=25.00m/s, fuel_used=0.007L, fuel_left=79.99L
+    Refuel at 38 (Brand 12), price=40.56 THB/L
+    From 38 to 83: 52.81m, speed=25.00m/s, fuel_used=0.004L, fuel_left=80.00L
+
+Car from Launch 159
+  Shopping list (name:qty): Nigga fish:1, Shrimp:4, Cabbage:3, Egg:5, Beef:4
+  Original stores: 30 -> 70
+  Optimized quest: 159 -> 30 -> 70 -> 83
+  Get point: 83
+  Cause: Completed quest
+  Distance: 400.27 m
+  Budget: 1264.46 THB [C1=100.00, C2_fuel=0.93, C2_extra=0.00, C3_entrance=343.64, C3_items=819.89]
+  Car Log:
+    From 159 to 131: 19.10m, speed=25.00m/s, fuel_used=0.003L, fuel_left=80.00L [TRAFFIC JAM x2]
+    From 131 to 30: 59.64m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.99L
+    Buy at store 30: Nigga fishx1 (cost 50.16 THB), Eggx5 (cost 21.03 THB)
+    From 30 to 70: 65.44m, speed=25.00m/s, fuel_used=0.005L, fuel_left=79.99L
+    Buy at store 70: Shrimpx4 (cost 1138.61 THB, revenue 1380.00 THB), Cabbagex3 (cost 44.73 THB), Beefx4 (cost 945.34 THB)
+    From 70 to 5: 43.28m, speed=25.00m/s, fuel_used=0.003L, fuel_left=79.98L
+    Refuel at 5 (Brand 3), price=22.34 THB/L
+    From 5 to 9: 76.24m, speed=25.00m/s, fuel_used=0.006L, fuel_left=79.99L
+    From 9 to 38: 83.76m, speed=25.00m/s, fuel_used=0.007L, fuel_left=79.99L
+    Refuel at 38 (Brand 12), price=40.56 THB/L
+    From 38 to 83: 52.81m, speed=25.00m/s, fuel_used=0.004L, fuel_left=80.00L
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algorithm Map Compare</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Simulation map viewer</p>
+      <h1>Compare routes between algorithms</h1>
+      <p class="lede">Run one shared scenario, then see how the two strategies traverse the same map.</p>
+      <form id="control-form" class="controls">
+        <label>
+          Seed
+          <input type="number" id="seed-input" placeholder="random" />
+        </label>
+        <label>
+          Num runs (full)
+          <input type="number" id="runs-input" value="100" min="1" />
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" id="fullrun-toggle" /> Run full batch with progress
+        </label>
+        <button type="submit" id="run-btn">Run comparison</button>
+        <span id="status" class="status idle">Idle</span>
+      </form>
+      <div class="legend" id="legend"></div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Old algorithm</h2>
+        <div id="old-meta" class="meta"></div>
+      </div>
+      <canvas id="old-canvas" width="640" height="640"></canvas>
+    </section>
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Our algorithm</h2>
+        <div id="our-meta" class="meta"></div>
+      </div>
+      <canvas id="our-canvas" width="640" height="640"></canvas>
+    </section>
+  </main>
+
+  <section class="errors" id="errors" aria-live="polite"></section>
+
+  <script src="app.js"></script>
+</body>
+</html>
