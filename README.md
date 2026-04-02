@@ -1,5 +1,5 @@
 # Simulation using BFS and Nearest-Neighbor Heuristic
-### Made for ESC17 and SciUS17  
+### Made for ESC17 and SciUS16  
 For educational purpose only
 
 ## Tools:
