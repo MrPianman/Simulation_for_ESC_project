@@ -18,7 +18,7 @@ if __name__ == '__main__':
 	gety = our_summary.get("gety") if our_summary else None
 	gasx = our_summary.get("gasx") if our_summary else None
 	gasy = our_summary.get("gasy") if our_summary else None
-	idd = count(1)
+	idd = count(0)
 	pointss = [{'id': next(idd),'x':x,'y':y} for (x,y) in zip(storex+getx+gasx,storey+gety+gasy)]
 	pointsx = []
 	pointsy = []
@@ -29,12 +29,11 @@ if __name__ == '__main__':
 	for node, connections in connect.items():
 		if node < len(pointsx) and node < len(pointsy):
 			for connected_node in connections:
-				if isinstance(connected_node, int) and connected_node < len(pointsx) and connected_node < len(pointsy):
-					plt.plot([pointsx[node], pointsx[connected_node]], [pointsy[node], pointsy[connected_node]], 'k-', linewidth=0.5)
+				if isinstance(connected_node, int) and connected_node < len(pointsx):
+					plt.plot([pointsx[node], pointsx[connected_node]], [pointsy[node], pointsy[connected_node]], 'k-', linewidth = "0.8")
 	plt.scatter(storex,storey,label = "Store")
 	plt.scatter(gasx,gasy,label = "Gas Station")
 	plt.scatter(getx,gety,label = "Get Point")
-	# print(type(storex),type(getx),type(gasx))
 	print('--- our_alogorithm ---')
 	print(f'Finish rate: {our_rate:.2%}')
 	print(f'Avg Cost: {our_cost:.2f} THB')
@@ -42,8 +41,15 @@ if __name__ == '__main__':
 	plt.grid()
 	plt.xlabel('X-Level')
 	plt.ylabel('Y-Level')
+	
+	# Show on low map size
+	# plt.xlim(-5, 121)
+	# plt.ylim(-1, 101)
+
+	# Show on high map size
 	plt.xlim(-500, 12100)
 	plt.ylim(-100, 10100)
+	
 	plt.show()
 	plt.close('all')
 
@@ -53,14 +59,6 @@ if __name__ == '__main__':
 	old_cost = old_summary.get('average_cost') if old_summary else None
 	old_x = old_summary.get("ganx") if old_summary else None
 	old_y = old_summary.get("gany") if old_summary else None
-	# plt.xlim(-10000, 10000)
-	# plt.ylim(-10000, 10000)
-	# plt.grid()	
-	# plt.scatter(old_x,old_y)
-	# plt.title("Location of Stores")
-	# plt.show()
-	# plt.close('all')
-
 	if old_cost in (None, 0):
 		evalu = 0.0
 	else:

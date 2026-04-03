@@ -257,6 +257,7 @@ def main():
     config['log_dir'] = 'logs_old'
     config['delete_fuel_fail_logs'] = True
     config['delete_failed_logs'] = True
+    config['algo_name'] = 'OldAlgo'
     summary = run_many(
         num_runs=NUM_RUNS,
         strategy=simulate_car_threshold,

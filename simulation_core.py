@@ -7,7 +7,7 @@ import random
 from collections import deque
 from datetime import datetime
 from functools import partial
-from typing import Callable, Dict, List, Set
+from typing import Callable, Dict, List, Set, Any
 import matplotlib.pyplot as plt
 
 Point = Dict[str, float | int | str]
@@ -21,9 +21,21 @@ GAS_COUNT = 70
 LAUNCH_COUNT = 10
 GET_POINT_COUNT = LAUNCH_COUNT
 LOG_DIR = 'logs'
-MAX_NEIGHBORS = 1
+MAX_NEIGHBORS = 3
 FUEL_PRICE = 29.94  # THB per liter (Diesel B7)
 STATISTIC_COST = 100
+
+# --- CONFIG PARAMETERS ---
+# NUM_RUNS = 1  # default number of simulation rounds
+# MAP_SIZE = 100
+# STORE_COUNT = 8
+# GAS_COUNT = 7
+# LAUNCH_COUNT = 1
+# GET_POINT_COUNT = LAUNCH_COUNT
+# LOG_DIR = 'logs'
+# MAX_NEIGHBORS = 3
+# FUEL_PRICE = 29.94  # THB per liter (Diesel B7)
+# STATISTIC_COST = 5
 
 # --- COST MODEL (C1 / C2 / C3) ---
 STATIC_COST_PER_CAR = STATISTIC_COST    # C1: one-time vehicle use cost per car (THB)
@@ -399,6 +411,11 @@ def reorder_stores_2opt(start: Point, end: Point, stores: List[Point], connectio
                 break
     return route[1:-1]
 
+def log_entry(car_id,activity,details = None):
+    if details:
+        return f'Car {car_id}: {activity} - {details}'
+    else:
+        return f'Car {car_id}: {activity}'
 
 # --- RUNNER ---
 
@@ -517,7 +534,8 @@ def run_simulation_instance(run: int, strategy: Callable, config: Dict) -> Dict:
 
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     target_dir = big_log_dir if big_log_every and run % big_log_every == 0 else log_dir
-    log_filename = os.path.join(target_dir, f'log_{timestamp}_run{run}.txt')
+    algo_name = config.get('algo_name', 'Algo')   # ← reads the name from config
+    log_filename = os.path.join(target_dir, f'{algo_name}_log_No.{run}.txt')
     with open(log_filename, 'w', encoding='utf-8') as logf:
         logf.write(f'Run {run} Log\n')
         logf.write(f'Seed: {seed_val}\n')
@@ -557,26 +575,31 @@ def run_simulation_instance(run: int, strategy: Callable, config: Dict) -> Dict:
                 f', C3_items={res.get("c3_items", 0):.2f}]\n'
             )
             logf.write('  Car Log:\n')
-            for entry in res['log']:
-                logf.write(f'    {entry}\n')
-            logf.write('\n')
+            # for entry in res['log']:
+            #     logf.write(f'    {entry}\n')
+            # logf.write('\n')
+            # print(len(res['log']))
+
+            for i in range(len(res['log'])):
+                logf.write(f'   {res["log"][i]}\n')
 
     # print(f'Run {run}: Overall Cause: {overall_cause} | Budget(all cars): {total_budget_all:.2f}', flush=True)
 
     # Delete log file if this run failed due to fuel and the flag is set
-    if config.get('delete_fuel_fail_logs', False) or (config.get('delete_failed_logs',False) and overall_cause != 'Completed all cars'):
+    delete_this = False
+    if config.get('delete_fuel_fail_logs', False):
         cause_lower = overall_cause.lower()
         fuel_fail = any(kw in cause_lower for kw in ('out of fuel', 'fuel below reserve', 'no gas station', 'no route to gas'))
         if fuel_fail:
-            try:
-                os.remove(log_filename)
-            except OSError:
-                pass
-        else:
-            try:
-                os.remove(log_filename)
-            except OSError:
-                pass
+            delete_this = True
+    if config.get('delete_failed_logs', False) and overall_cause != 'Completed all cars':
+        delete_this = True
+
+    if delete_this:
+        try:
+            os.remove(log_filename)
+        except OSError:
+            pass
 
     # Delete log file for any unfinished run
     # if config.get('delete_failed_logs', False) and overall_cause != 'Completed all cars':
@@ -600,6 +623,7 @@ def run_simulation_instance(run: int, strategy: Callable, config: Dict) -> Dict:
         'getx': getx,
         'gety': gety,
         'connect': connections,
+        'cause': overall_cause,
     }
 
 

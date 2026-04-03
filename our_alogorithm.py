@@ -339,6 +339,7 @@ def main():
     config['car_metadata'] = CAR_METADATA
     config['log_dir'] = 'logs_our'
     config['delete_failed_logs'] = True
+    config['algo_name'] = 'NewAlgo'
     summary = run_many(
         num_runs=NUM_RUNS,
         strategy=simulate_car_pdf,
