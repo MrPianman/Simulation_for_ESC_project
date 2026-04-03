@@ -8,13 +8,14 @@ from collections import deque
 from datetime import datetime
 from functools import partial
 from typing import Callable, Dict, List, Set
+import matplotlib.pyplot as plt
 
 Point = Dict[str, float | int | str]
 Connections = Dict[int, Set[int]]
 
 # --- CONFIG PARAMETERS ---
-NUM_RUNS = 10000  # default number of simulation rounds
-MAP_SIZE = 1000
+NUM_RUNS = 1  # default number of simulation rounds
+MAP_SIZE = 10000
 STORE_COUNT = 80
 GAS_COUNT = 70
 LAUNCH_COUNT = 10
@@ -27,10 +28,9 @@ STATISTIC_COST = 100
 # --- COST MODEL (C1 / C2 / C3) ---
 STATIC_COST_PER_CAR = STATISTIC_COST    # C1: one-time vehicle use cost per car (THB)
 EXTRA_KM_COST_ENABLED = False           # C2: toggle per-km overhead on top of fuel cost
-EXTRA_KM_COST_PER_KM = 0              # C2: overhead rate (THB per km)
-STORE_ENTRANCE_FEE_MIN = 120             # C3: min entrance fee per store visit (THB)
-STORE_ENTRANCE_FEE_MAX = 400             # C3: max entrance fee per store visit (THB)
-
+EXTRA_KM_COST_PER_KM = 0                # C2: overhead rate (THB per km)
+STORE_ENTRANCE_FEE_MIN = 120            # C3: min entrance fee per store visit (THB)
+STORE_ENTRANCE_FEE_MAX = 400            # C3: max entrance fee per store visit (THB)
 
 # --- CAR DATA ---
 CAR_METADATA = {
@@ -190,7 +190,7 @@ def connect_points(points: List[Point], max_neighbors: int) -> Connections:
             visited.add(node)
             stack.extend(connections[node] - visited)
         unvisited = all_ids - visited
-
+    # print(connections)
     return connections
 
 
@@ -423,7 +423,27 @@ def run_simulation_instance(run: int, strategy: Callable, config: Dict) -> Dict:
     big_log_dir = os.path.join(log_dir, big_log_subdir)
     ensure_log_dir(big_log_dir)
 
+    # For visualization
+    storex = []
+    storey = []
+    gasx = []
+    gasy = []
+    getx = []
+    gety = []
     points: List[Point] = random_points(config)
+    # print(points)
+    for _ in range(len(points)):
+        if points[_]["type"] == "store": 
+            storex.append(points[_]["x"])
+            storey.append(points[_]["y"])
+        if points[_]["type"] == "gas_station":
+            gasx.append(points[_]["x"])
+            gasy.append(points[_]["y"])
+        if points[_]["type"] == "get_point":
+            getx.append(points[_]["x"])
+            gety.append(points[_]["y"])
+        
+    # End of For visualization
     connections = connect_points(points, max_neighbors)
 
     launch_points = [p for p in points if p['type'] == POINT_LAUNCH]
@@ -544,7 +564,7 @@ def run_simulation_instance(run: int, strategy: Callable, config: Dict) -> Dict:
     # print(f'Run {run}: Overall Cause: {overall_cause} | Budget(all cars): {total_budget_all:.2f}', flush=True)
 
     # Delete log file if this run failed due to fuel and the flag is set
-    if config.get('delete_fuel_fail_logs', False):
+    if config.get('delete_fuel_fail_logs', False) or (config.get('delete_failed_logs',False) and overall_cause != 'Completed all cars'):
         cause_lower = overall_cause.lower()
         fuel_fail = any(kw in cause_lower for kw in ('out of fuel', 'fuel below reserve', 'no gas station', 'no route to gas'))
         if fuel_fail:
@@ -552,13 +572,18 @@ def run_simulation_instance(run: int, strategy: Callable, config: Dict) -> Dict:
                 os.remove(log_filename)
             except OSError:
                 pass
+        else:
+            try:
+                os.remove(log_filename)
+            except OSError:
+                pass
 
     # Delete log file for any unfinished run
-    if config.get('delete_failed_logs', False) and overall_cause != 'Completed all cars':
-        try:
-            os.remove(log_filename)
-        except OSError:
-            pass
+    # if config.get('delete_failed_logs', False) and overall_cause != 'Completed all cars':
+    #     try:
+    #         os.remove(log_filename)
+    #     except OSError:
+    #         pass
 
     return {
         'cause': overall_cause,
@@ -568,6 +593,13 @@ def run_simulation_instance(run: int, strategy: Callable, config: Dict) -> Dict:
         'c2_extra': total_c2_extra_all,
         'c3_entrance': total_c3_entrance_all,
         'c3_items': total_c3_items_all,
+        'storex': storex,
+        'storey': storey,
+        'gasx': gasx,
+        'gasy': gasy,
+        'getx': getx,
+        'gety': gety,
+        'connect': connections,
     }
 
 
@@ -710,6 +742,7 @@ def summarize_in_memory(results: List[Dict]) -> Dict[str, float | int]:
     total_c3_entrance = 0.0
     total_c3_items = 0.0
     cost_count = 0
+    # print(results)
     for res in results:
         if not res:
             fail += 1
@@ -750,6 +783,13 @@ def summarize_in_memory(results: List[Dict]) -> Dict[str, float | int]:
         'avg_c2_extra': avg_c2_extra,
         'avg_c3_entrance': avg_c3_entrance,
         'avg_c3_items': avg_c3_items,
+        'storex': results[0]["storex"],
+        'storey': results[0]["storey"],
+        'gasx': results[0]["gasx"],
+        'gasy': results[0]["gasy"],
+        'getx': results[0]["getx"],
+        'gety': results[0]["gety"],
+        'connect': results[0]["connect"],
     }
 
 
@@ -784,5 +824,4 @@ def run_many(num_runs: int, strategy: Callable, summarizer: Callable, config: Di
         initargs=(market_items,),
     ) as pool:
         results = pool.map(runner, range(1, num_runs + 1), chunksize=chunksize)
-
     return summarizer(results)
