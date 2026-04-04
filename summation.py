@@ -30,15 +30,15 @@ if __name__ == '__main__':
 		if node < len(pointsx) and node < len(pointsy):
 			for connected_node in connections:
 				if isinstance(connected_node, int) and connected_node < len(pointsx):
-					plt.plot([pointsx[node], pointsx[connected_node]], [pointsy[node], pointsy[connected_node]], 'k-', linewidth = "0.8")
-	plt.scatter(storex,storey,label = "Store")
-	plt.scatter(gasx,gasy,label = "Gas Station")
-	plt.scatter(getx,gety,label = "Get Point")
+					plt.plot([pointsx[node], pointsx[connected_node]], [pointsy[node], pointsy[connected_node]], 'k-', linewidth = "0.8", zorder = 2)
+	plt.scatter(storex,storey,label = "Store",zorder = 3)
+	plt.scatter(gasx,gasy,label = "Gas Station",zorder = 3)
+	plt.scatter(getx,gety,label = "Get Point",zorder = 3)
 	print('--- our_alogorithm ---')
 	print(f'Finish rate: {our_rate:.2%}')
 	print(f'Avg Cost: {our_cost:.2f} THB')
 	plt.legend(loc = "center right")
-	plt.grid()
+	plt.grid(zorder = 1)
 	plt.xlabel('X-Level')
 	plt.ylabel('Y-Level')
 	
@@ -54,6 +54,7 @@ if __name__ == '__main__':
 	plt.close('all')
 
 	old_summary = old_algorithm.main()
+	print('--- old_algorithm ---')
 	print("run old algo..... successful!")
 	old_rate = old_summary.get('finish_rate') if old_summary else None
 	old_cost = old_summary.get('average_cost') if old_summary else None
@@ -63,7 +64,6 @@ if __name__ == '__main__':
 		evalu = 0.0
 	else:
 		evalu = (abs(our_cost - old_cost) / old_cost)
-	print('--- old_algorithm ---')
 	print(f'Finish rate: {old_rate:.2%}')
 	print(f'Avg Cost: {old_cost:.2f} THB')
 	print("---------------------")

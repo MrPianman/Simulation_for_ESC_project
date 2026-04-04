@@ -13,19 +13,19 @@ import matplotlib.pyplot as plt
 Point = Dict[str, float | int | str]
 Connections = Dict[int, Set[int]]
 
-# # --- CONFIG PARAMETERS ---
-# NUM_RUNS = 1  # default number of simulation rounds
-# MAP_SIZE = 10000
-# STORE_COUNT = 80
-# GAS_COUNT = 70
-# LAUNCH_COUNT = 10
-# GET_POINT_COUNT = LAUNCH_COUNT
-# LOG_DIR = 'logs'
-# MAX_NEIGHBORS = 3
-# FUEL_PRICE = 29.94  # THB per liter (Diesel B7)
-# STATISTIC_COST = 100
-# FUEL_BRAND_COUNT = 12
-# FUEL_PRICE_NOISE_RANGE = 12 
+# --- CONFIG PARAMETERS ---
+NUM_RUNS = 1  # default number of simulation rounds
+MAP_SIZE = 10000
+STORE_COUNT = 80
+GAS_COUNT = 70
+LAUNCH_COUNT = 10
+GET_POINT_COUNT = LAUNCH_COUNT
+LOG_DIR = 'logs'
+MAX_NEIGHBORS = 3
+FUEL_PRICE = 29.94  # THB per liter (Diesel B7)
+STATISTIC_COST = 100
+FUEL_BRAND_COUNT = 12
+FUEL_PRICE_NOISE_RANGE = 12 
 
 # --- CONFIG PARAMETERS ---
 NUM_RUNS = 1  # default number of simulation rounds
@@ -542,7 +542,7 @@ def run_simulation_instance(run: int, strategy: Callable, config: Dict) -> Dict:
     log_filename = os.path.join(target_dir, f'{algo_name}_log_No.{run}.txt')
     with open(log_filename, 'w', encoding='utf-8') as logf:
         logf.write(f'Run {run} Log\n')
-        logf.write(f'Seed: {seed_val}\n')
+        # logf.write(f'Seed: {seed_val}\n')
         logf.write('Fuel Brands:\n')
         for brand, info in sorted(brand_summary.items(), key=lambda kv: kv[0]):
             station_list = ','.join(str(sid) for sid in sorted(info['stations']))
