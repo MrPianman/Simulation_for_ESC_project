@@ -13,29 +13,33 @@ import matplotlib.pyplot as plt
 Point = Dict[str, float | int | str]
 Connections = Dict[int, Set[int]]
 
-# --- CONFIG PARAMETERS ---
-NUM_RUNS = 1  # default number of simulation rounds
-MAP_SIZE = 10000
-STORE_COUNT = 80
-GAS_COUNT = 70
-LAUNCH_COUNT = 10
-GET_POINT_COUNT = LAUNCH_COUNT
-LOG_DIR = 'logs'
-MAX_NEIGHBORS = 3
-FUEL_PRICE = 29.94  # THB per liter (Diesel B7)
-STATISTIC_COST = 100
-
-# --- CONFIG PARAMETERS ---
+# # --- CONFIG PARAMETERS ---
 # NUM_RUNS = 1  # default number of simulation rounds
-# MAP_SIZE = 100
-# STORE_COUNT = 8
-# GAS_COUNT = 7
-# LAUNCH_COUNT = 1
+# MAP_SIZE = 10000
+# STORE_COUNT = 80
+# GAS_COUNT = 70
+# LAUNCH_COUNT = 10
 # GET_POINT_COUNT = LAUNCH_COUNT
 # LOG_DIR = 'logs'
 # MAX_NEIGHBORS = 3
 # FUEL_PRICE = 29.94  # THB per liter (Diesel B7)
-# STATISTIC_COST = 5
+# STATISTIC_COST = 100
+# FUEL_BRAND_COUNT = 12
+# FUEL_PRICE_NOISE_RANGE = 12 
+
+# --- CONFIG PARAMETERS ---
+NUM_RUNS = 1  # default number of simulation rounds
+MAP_SIZE = 100
+STORE_COUNT = 8
+GAS_COUNT = 7
+LAUNCH_COUNT = 1
+GET_POINT_COUNT = LAUNCH_COUNT
+LOG_DIR = 'logs'
+MAX_NEIGHBORS = 3
+FUEL_PRICE = 29.94  # THB per liter (Diesel B7)
+STATISTIC_COST = 5
+FUEL_BRAND_COUNT = 1
+FUEL_PRICE_NOISE_RANGE = 1
 
 # --- COST MODEL (C1 / C2 / C3) ---
 STATIC_COST_PER_CAR = STATISTIC_COST    # C1: one-time vehicle use cost per car (THB)
@@ -76,8 +80,8 @@ DEFAULT_CONFIG = {
     'big_log_every': 1,
     'max_neighbors': MAX_NEIGHBORS,
     'fuel_price_base': FUEL_PRICE,
-    'fuel_price_noise_range': 12,  # wider price spread makes smart selection matter more
-    'fuel_brand_count': 12,
+    'fuel_price_noise_range': FUEL_PRICE_NOISE_RANGE,  # wider price spread makes smart selection matter more
+    'fuel_brand_count': FUEL_BRAND_COUNT,
     'fuel_brand_prices': None,  # optional explicit list overrides base/noise
     'static_cost_per_car': STATIC_COST_PER_CAR,
     'extra_km_cost_enabled': EXTRA_KM_COST_ENABLED,

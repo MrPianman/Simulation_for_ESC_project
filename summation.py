@@ -43,12 +43,12 @@ if __name__ == '__main__':
 	plt.ylabel('Y-Level')
 	
 	# Show on low map size
-	# plt.xlim(-5, 121)
-	# plt.ylim(-1, 101)
+	plt.xlim(-5, 121)
+	plt.ylim(-1, 101)
 
 	# Show on high map size
-	plt.xlim(-500, 12100)
-	plt.ylim(-100, 10100)
+	# plt.xlim(-500, 12100)
+	# plt.ylim(-100, 10100)
 	
 	plt.show()
 	plt.close('all')
